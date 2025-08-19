@@ -212,7 +212,7 @@ img {
   position: absolute;
   right: 0;
   bottom: 0;
-  width: 260px;
+  width: 200px;
 }
 .home__blob {
   fill: var(--first-color);
@@ -306,6 +306,51 @@ img {
 .skills__img {
   border-radius: 0.5rem;
 }
+/* ===== EDUCATION =====*/
+.education__container {
+  display: grid;
+  gap: 2rem;
+}
+
+.education__item {
+  background-color: #1f1f1f; /* Dark card background */
+  color: #e0e0e0;
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  box-shadow: 0px 4px 20px rgba(0,0,0,0.6);
+  transition: transform 0.3s ease;
+}
+
+.education__item:hover {
+  transform: translateY(-5px);
+}
+
+.education__degree {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--first-color);
+  margin-bottom: 0.5rem;
+}
+
+.education__institution {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.25rem;
+}
+
+.education__year {
+  display: block;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: #bbb;
+}
+
+.education__result {
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #fff;
+}
+
 
 /* ===== WORK =====*/
 .work__container {
