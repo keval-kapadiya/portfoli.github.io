@@ -178,57 +178,7 @@
             </div>
         </section>
 
-        <!--===== CONTACT =====-->
-      <!-- Contact Section -->
-  <!--===== CONTACT =====-->
-  <section class="contact section" id="contact">
-    <h2 class="section-title">Contact</h2>
-
-    <div class="contact__container bd-grid">
-      <form id="contactForm" class="contact__form">
-        <input type="text" name="name" placeholder="Your Name" class="contact__input" required>
-        <input type="email" name="email" placeholder="Your Email" class="contact__input" required>
-        <input type="hidden" name="time" id="currentTime">
-        <textarea name="message" placeholder="Your Message" rows="10" class="contact__input" required></textarea>
-        <input type="submit" value="Submit" class="contact__button button">
-        <div id="formResponse" class="form__response"></div>
-      </form>
-    </div>
-  </section>
-
-  <!-- EmailJS Library -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
-
-  <!-- Script -->
-  <script>
-    (function () {
-      emailjs.init("n0di6BGnS1VnEl7gj"); // ✅ Your public key
-    })();
-
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contactForm");
-
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
-
-        // Set current time
-        document.getElementById("currentTime").value = new Date().toLocaleString();
-
-        // Send using EmailJS
-        emailjs.sendForm("service_cn27rv4", "template_2jzr6om", this)
-          .then(function () {
-            document.getElementById("formResponse").textContent = "✅ Message sent successfully!";
-            document.getElementById("formResponse").style.color = "green";
-            form.reset();
-          }, function (error) {
-            document.getElementById("formResponse").textContent = "❌ Failed to send message.";
-            document.getElementById("formResponse").style.color = "red";
-            console.error("EmailJS Error:", error);
-          });
-      });
-    });
-  </script>
-  </main>
+    
 
   <!--===== CERTIFICATES =====-->
 <section class="certificate section" id="certificate">
@@ -305,7 +255,57 @@
         </a>
     </div>
 </section>
+  
+      <!-- Contact Section -->
+  <!--===== CONTACT =====-->
+  <section class="contact section" id="contact">
+    <h2 class="section-title">Contact</h2>
 
+    <div class="contact__container bd-grid">
+      <form id="contactForm" class="contact__form">
+        <input type="text" name="name" placeholder="Your Name" class="contact__input" required>
+        <input type="email" name="email" placeholder="Your Email" class="contact__input" required>
+        <input type="hidden" name="time" id="currentTime">
+        <textarea name="message" placeholder="Your Message" rows="10" class="contact__input" required></textarea>
+        <input type="submit" value="Submit" class="contact__button button">
+        <div id="formResponse" class="form__response"></div>
+      </form>
+    </div>
+  </section>
+
+  <!-- EmailJS Library -->
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+
+  <!-- Script -->
+  <script>
+    (function () {
+      emailjs.init("n0di6BGnS1VnEl7gj"); // ✅ Your public key
+    })();
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const form = document.getElementById("contactForm");
+
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+
+        // Set current time
+        document.getElementById("currentTime").value = new Date().toLocaleString();
+
+        // Send using EmailJS
+        emailjs.sendForm("service_cn27rv4", "template_2jzr6om", this)
+          .then(function () {
+            document.getElementById("formResponse").textContent = "✅ Message sent successfully!";
+            document.getElementById("formResponse").style.color = "green";
+            form.reset();
+          }, function (error) {
+            document.getElementById("formResponse").textContent = "❌ Failed to send message.";
+            document.getElementById("formResponse").style.color = "red";
+            console.error("EmailJS Error:", error);
+          });
+      });
+    });
+  </script>
+  </main>
 
       <!--===== FOOTER =====-->
     <footer class="footer">
