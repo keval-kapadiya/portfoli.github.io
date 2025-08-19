@@ -31,7 +31,7 @@
                     <li class="nav__item"><a href="#certificate" class="nav__link">Certificates</a></li>
                     <li class="nav__item"><a href="#resume" class="nav__link">Resume</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-                    
+
                 </ul>
             </div>
 
@@ -45,18 +45,83 @@
         <!--===== HOME =====-->
         <section class="home bd-grid" id="home">
             <div class="home__data">
-                <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Keval</span><br>Full Stack <br>
-                    Developer.</h1>
+                <h1 class="home__title">
+                    Hi,<br>
+                    I'am <span class="home__title-color">Keval</span><br>
+                    <small><span id="role"></span><span class="cursor">|</span></small>
+                </h1>
             </div>
 
             <div class="home__social">
-                <a href="http://linkedin.com/in/keval-kapadiya85" class="home__social-icon"><i class='bx bxl-linkedin'></i></a>
+                <a href="http://linkedin.com/in/keval-kapadiya85" class="home__social-icon"><i
+                        class='bx bxl-linkedin'></i></a>
                 <a href="https://github.com/KevalKapadiya" class="home__social-icon"><i class='bx bxl-github'></i></a>
             </div>
+
             <div class="home__img">
-                <image src="assets/img/hk.png"></image>
-                         </div>        
+                <img src="assets/img/keval.png" alt="Keval">
+            </div>
         </section>
+
+        <!-- Typing Effect Script -->
+        <script>
+            const roles = ["Full Stack Developer", "Data Scientist"];
+            let index = 0;
+            let charIndex = 0;
+            let isDeleting = false;
+            const speed = 120;
+
+            function typeEffect() {
+                const roleElement = document.getElementById("role");
+                const currentRole = roles[index];
+
+                roleElement.textContent = currentRole.substring(0, charIndex);
+
+                if (!isDeleting && charIndex < currentRole.length) {
+                    charIndex++;
+                    setTimeout(typeEffect, speed);
+                } else if (isDeleting && charIndex > 0) {
+                    charIndex--;
+                    setTimeout(typeEffect, speed / 2);
+                } else {
+                    isDeleting = !isDeleting;
+                    if (!isDeleting) {
+                        index = (index + 1) % roles.length;
+                    }
+                    setTimeout(typeEffect, 1000);
+                }
+            }
+
+            typeEffect();
+        </script>
+
+        <!-- Cursor Styling -->
+        <style>
+            small {
+                font-size: 50px;
+                color: #33050B;
+            }
+
+            .cursor {
+                display: inline-block;
+                margin-left: 2px;
+                animation: blink 0.7s infinite;
+            }
+
+            @keyframes blink {
+
+                0%,
+                50% {
+                    opacity: 1;
+                }
+
+                51%,
+                100% {
+                    opacity: 0;
+                }
+            }
+        </style>
+
 
         <!--===== ABOUT =====-->
         <section class="about section" id="about">
@@ -69,10 +134,36 @@
 
                 <div>
                     <h2 class="about__subtitle">I'am Keval</h2>
-                    <p class="about__text">I’m a passionate full-stack developer from India, skilled in building dynamic, responsive, and scalable web applications. With strong expertise in both frontend and backend technologies, I specialize in crafting seamless user experiences using HTML, CSS, JavaScript, and frameworks like React.js. On the backend, I work with Django, Node.js, and PHP, backed by solid database knowledge in MySQL and MongoDB. I enjoy turning ideas into real-world solutions, following best practices in clean code and UI/UX design. Constantly exploring the latest in tech, I’m driven by a love for learning, collaboration, and delivering impactful digital products that solve real problems.</p>
+                    <div class="about__text-box">
+                        <h3>👨‍💻 Frontend Development</h3>
+                        <ul>
+                            <li><b>Languages & Tools:</b> HTML, CSS, JavaScript</li>
+                            <li><b>Frameworks & Libraries:</b> React.js, Bootstrap, Tailwind CSS</li>
+                            <li><b>Focus:</b> Responsive design, UI/UX, animations</li>
+                        </ul>
+
+                        <h3>🖥️ Backend Development</h3>
+                        <ul>
+                            <li><b>Frameworks:</b> Django, Node.js, PHP, ASP.NET</li>
+                            <li><b>Databases:</b> MySQL, MongoDB</li>
+                            <li><b>Focus:</b> RESTful APIs, authentication, scalable architectures</li>
+                        </ul>
+
+                        <h3>📊 Data Science & AI/ML</h3>
+                        <ul>
+                            <li><b>Skills:</b> Predictive modeling, Deep learning, NLP, Data Analytics</li>
+                            <li><b>Tools:</b> Python, TensorFlow, Scikit-learn, Pandas, NumPy</li>
+                        </ul>
+
+                        <h3>🚀 Passion</h3>
+                        <p>I love turning ideas into impactful solutions—whether building scalable web applications or
+                            applying AI/ML to solve real-world business problems. With a strong focus on clean code,
+                            UI/UX, and innovation, I aim to deliver digital products that create real impact.</p>
+                    </div>
+
                 </div>
-            </div>
         </section>
+
 
         <!--===== SKILLS =====-->
         <section class="skills section" id="skills">
@@ -81,11 +172,12 @@
             <div class="skills__container bd-grid">
                 <div>
                     <h2 class="skills__subtitle">Professional Skills</h2>
-                    <p class="skills__text">I have expertise in full-stack development...</p>
+                    <p class="skills__text">
+                        I have expertise in full-stack development, backend frameworks, and data-driven technologies.
+                        Below are my core skills:
+                    </p>
 
-                    <!-- Skill items here (HTML, CSS, JS, PHP, etc.) -->
-
-                    <!-- Example -->
+                    <!-- HTML5 -->
                     <div class="skills__data">
                         <div class="skills__names">
                             <i class='bx bxl-html5 skills__icon'></i>
@@ -93,9 +185,8 @@
                         </div>
                     </div>
 
-
-                      <!-- CSS3 -->
-                      <div class="skills__data">
+                    <!-- CSS3 -->
+                    <div class="skills__data">
                         <div class="skills__names">
                             <i class='bx bxl-css3 skills__icon'></i>
                             <span class="skills__name">CSS3</span>
@@ -150,14 +241,27 @@
                         </div>
                     </div>
 
-                    <!-- Repeat for other skills -->
+                    <!-- Data Science & AI/ML -->
+                    <div class="skills__data">
+                        <div class="skills__names">
+                            <i class="fa-solid fa-brain skills__icon"></i>
+                            <span class="skills__name">Data Science & AI/ML</span>
+                        </div>
+                    </div>
                 </div>
 
+                <!-- Optional image -->
                 <div>
-                    <img src="assets/img/4.png" alt="" class="skills__img">
+                    <img src="assets/img/4.png" alt="Skills Illustration" class="skills__img">
                 </div>
             </div>
         </section>
+
+
+
+
+
+
 
         <!--===== WORK =====-->
         <section class="work section" id="work">
@@ -173,147 +277,156 @@
                 <a href="https://github.com/KevalKapadiya/Hackout2024-Hari" target="_blank" class="work__img">
                     <img src="assets/img/Screenshot 2025-04-10 164737.png" alt="Project 2">
                 </a>
-                
-           
+
+
             </div>
         </section>
 
-    
 
-  <!--===== CERTIFICATES =====-->
-<section class="certificate section" id="certificate">
-    <h2 class="section-title">Certificates</h2>
+    </main>
 
-    <div class="certificate__container bd-grid">
-        <!-- Certificate 1 -->
-        <div class="certificate__item">
-            <img src="assets/img/11.png" alt="Certificate 1" class="certificate__img">
-            <h3 class="certificate__title">GenAI Study Jam</h3>
+    <!--===== CERTIFICATES =====-->
+    <section class="certificate section" id="certificate">
+        <h2 class="section-title">Certificates</h2>
 
-            </h3>
-            <p class="certificate__description">Completed all 15 GenAI Study Jam courses, demonstrating skills and dedication in Generative AI learning.</p>
-            <a href="assets/img/11.png" class="button" target="_blank">View</a>
-        </div>
+        <div class="certificate__container bd-grid">
+            <!-- Certificate 1 -->
+            <div class="certificate__item">
+                <img src="assets/img/11.png" alt="Certificate 1" class="certificate__img">
+                <h3 class="certificate__title">GenAI Study Jam</h3>
 
-        <!-- Certificate 2 -->
-        <div class="certificate__item">
-            <img src="assets/img/WhatsApp Image 2025-04-22 at 5.18.39 PM.jpeg" alt="Certificate 2" class="certificate__img">
-            <h3 class="certificate__title">Hackathon Participation</h3>
-            <p class="certificate__description">Participated in HackOut 2024 and built a crop outcome management system.</p>
-            <a href="assets/img/WhatsApp Image 2025-04-22 at 5.18.39 PM.jpeg" class="button" target="_blank">View</a>
-        </div>
+                </h3>
+                <p class="certificate__description">Completed all 15 GenAI Study Jam courses, demonstrating skills and
+                    dedication in Generative AI learning.</p>
+                <a href="assets/img/11.png" class="button" target="_blank">View</a>
+            </div>
+
+            <!-- Certificate 2 -->
+            <div class="certificate__item">
+                <img src="assets/img/WhatsApp Image 2025-04-22 at 5.18.39 PM.jpeg" alt="Certificate 2"
+                    class="certificate__img">
+                <h3 class="certificate__title">Hackathon Participation</h3>
+                <p class="certificate__description">Participated in HackOut 2024 and built a crop outcome management
+                    system.</p>
+                <a href="assets/img/WhatsApp Image 2025-04-22 at 5.18.39 PM.jpeg" class="button"
+                    target="_blank">View</a>
+            </div>
 
             <!-- Certificate 3 -->
             <div class="certificate__item">
                 <img src="assets/img/22.png" alt="Certificate 3" class="certificate__img">
                 <h3 class="certificate__title">Cyber Security Foundation</h3>
-                <p class="certificate__description">Completed Cyber Security course, learned threats, protection, and security principles.</p>
+                <p class="certificate__description">Completed Cyber Security course, learned threats, protection, and
+                    security principles.</p>
                 <a href="assets/img/22.png" class="button" target="_blank">View</a>
             </div>
 
-                <!-- Certificate 4 -->
-        <div class="certificate__item">
-            <img src="assets/img/33.png" alt="Certificate 4" class="certificate__img">
-            <h3 class="certificate__title">Introduction to Cyber Security</h3>
-            <p class="certificate__description">Learned basic cybersecurity concepts, threats, vulnerabilities, and protection techniques.</p>
-            <a href="assets/img/33.png" class="button" target="_blank">View</a>
+            <!-- Certificate 4 -->
+            <div class="certificate__item">
+                <img src="assets/img/33.png" alt="Certificate 4" class="certificate__img">
+                <h3 class="certificate__title">Introduction to Cyber Security</h3>
+                <p class="certificate__description">Learned basic cybersecurity concepts, threats, vulnerabilities, and
+                    protection techniques.</p>
+                <a href="assets/img/33.png" class="button" target="_blank">View</a>
+            </div>
+
+            <!-- Certificate 5 -->
+            <div class="certificate__item">
+                <img src="assets/img/44.png" alt="Certificate 5" class="certificate__img">
+                <h3 class="certificate__title">Cyber Security and Applied Ethical Hacking</h3>
+                <p class="certificate__description">Explored ethical hacking techniques, penetration testing, and
+                    cybersecurity defense strategies.</p>
+                <a href="assets/img/44.png" class="button" target="_blank">View</a>
+            </div>
+
+            <!-- Certificate 6 -->
+            <div class="certificate__item">
+                <img src="assets/img/kn_page-0001.jpg" alt="Certificate 6" class="certificate__img">
+                <h3 class="certificate__title">Data Science 101</h3>
+                <p class="certificate__description">Introductory course on data science fundamentals, tools, techniques,
+                    and practical applications.</p>
+                <a href="assets/img/kn_page-0001.jpg" class="button" target="_blank">View</a>
+            </div>
+
+
+            <!-- Add more certificates as needed -->
         </div>
-
-                  <!-- Certificate 5 -->
-                  <div class="certificate__item">
-                    <img src="assets/img/44.png" alt="Certificate 5" class="certificate__img">
-                    <h3 class="certificate__title">Cyber Security and Applied Ethical Hacking</h3>
-                    <p class="certificate__description">Explored ethical hacking techniques, penetration testing, and cybersecurity defense strategies.</p>
-                    <a href="assets/img/44.png" class="button" target="_blank">View</a>
-                </div>
-
-                          <!-- Certificate 6 -->
-                          <div class="certificate__item">
-                            <img src="assets/img/kn_page-0001.jpg" alt="Certificate 6" class="certificate__img">
-                            <h3 class="certificate__title">Data Science 101</h3>
-                            <p class="certificate__description">Introductory course on data science fundamentals, tools, techniques, and practical applications.</p>
-                            <a href="assets/img/kn_page-0001.jpg" class="button" target="_blank">View</a>
-                        </div>
+    </section>
 
 
-        <!-- Add more certificates as needed -->
-    </div>
-</section>
+    <!--===== RESUME =====-->
+    <section class="resume section" id="resume">
+        <h2 class="section-title">Resume</h2>
 
+        <div class="resume__container bd-grid">
+            <p class="resume__text">You can download or view my resume by clicking the button below:</p>
+            <a href="assets/img/Keval Resume.pdf" class="button" download target="_blank">
+                <i class="fa-solid fa-file-arrow-down"></i> Download Resume
+            </a>
+            <a href="assets/img/Keval Resume.pdf" class="button" target="_blank" style="margin-top: 10px;">
+                <i class="fa-solid fa-eye"></i> View Resume
+            </a>
+        </div>
+    </section>
 
-  <!--===== RESUME =====-->
-<section class="resume section" id="resume">
-    <h2 class="section-title">Resume</h2>
+    <!-- Contact Section -->
+    <!--===== CONTACT =====-->
+    <section class="contact section" id="contact">
+        <h2 class="section-title">Contact</h2>
 
-    <div class="resume__container bd-grid">
-        <p class="resume__text">You can download or view my resume by clicking the button below:</p>
-        <a href="assets/img/Keval Resume.pdf" class="button" download target="_blank">
-            <i class="fa-solid fa-file-arrow-down"></i> Download Resume
-        </a>
-        <a href="assets/img/Keval Resume.pdf" class="button" target="_blank" style="margin-top: 10px;">
-            <i class="fa-solid fa-eye"></i> View Resume
-        </a>
-    </div>
-</section>
-  
-      <!-- Contact Section -->
-  <!--===== CONTACT =====-->
-  <section class="contact section" id="contact">
-    <h2 class="section-title">Contact</h2>
+        <div class="contact__container bd-grid">
+            <form id="contactForm" class="contact__form">
+                <input type="text" name="name" placeholder="Your Name" class="contact__input" required>
+                <input type="email" name="email" placeholder="Your Email" class="contact__input" required>
+                <input type="hidden" name="time" id="currentTime">
+                <textarea name="message" placeholder="Your Message" rows="10" class="contact__input"
+                    required></textarea>
+                <input type="submit" value="Submit" class="contact__button button">
+                <div id="formResponse" class="form__response"></div>
+            </form>
+        </div>
+    </section>
 
-    <div class="contact__container bd-grid">
-      <form id="contactForm" class="contact__form">
-        <input type="text" name="name" placeholder="Your Name" class="contact__input" required>
-        <input type="email" name="email" placeholder="Your Email" class="contact__input" required>
-        <input type="hidden" name="time" id="currentTime">
-        <textarea name="message" placeholder="Your Message" rows="10" class="contact__input" required></textarea>
-        <input type="submit" value="Submit" class="contact__button button">
-        <div id="formResponse" class="form__response"></div>
-      </form>
-    </div>
-  </section>
+    <!-- EmailJS Library -->
+    <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
 
-  <!-- EmailJS Library -->
-  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@2.4.1/dist/email.min.js"></script>
+    <!-- Script -->
+    <script>
+        (function () {
+            emailjs.init("n0di6BGnS1VnEl7gj"); // ✅ Your public key
+        })();
 
-  <!-- Script -->
-  <script>
-    (function () {
-      emailjs.init("n0di6BGnS1VnEl7gj"); // ✅ Your public key
-    })();
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
 
-    document.addEventListener("DOMContentLoaded", function () {
-      const form = document.getElementById("contactForm");
+            form.addEventListener("submit", function (e) {
+                e.preventDefault();
 
-      form.addEventListener("submit", function (e) {
-        e.preventDefault();
+                // Set current time
+                document.getElementById("currentTime").value = new Date().toLocaleString();
 
-        // Set current time
-        document.getElementById("currentTime").value = new Date().toLocaleString();
+                // Send using EmailJS
+                emailjs.sendForm("service_cn27rv4", "template_2jzr6om", this)
+                    .then(function () {
+                        document.getElementById("formResponse").textContent = "✅ Message sent successfully!";
+                        document.getElementById("formResponse").style.color = "green";
+                        form.reset();
+                    }, function (error) {
+                        document.getElementById("formResponse").textContent = "❌ Failed to send message.";
+                        document.getElementById("formResponse").style.color = "red";
+                        console.error("EmailJS Error:", error);
+                    });
+            });
+        });
+    </script>
 
-        // Send using EmailJS
-        emailjs.sendForm("service_cn27rv4", "template_2jzr6om", this)
-          .then(function () {
-            document.getElementById("formResponse").textContent = "✅ Message sent successfully!";
-            document.getElementById("formResponse").style.color = "green";
-            form.reset();
-          }, function (error) {
-            document.getElementById("formResponse").textContent = "❌ Failed to send message.";
-            document.getElementById("formResponse").style.color = "red";
-            console.error("EmailJS Error:", error);
-          });
-      });
-    });
-  </script>
-  </main>
-
-      <!--===== FOOTER =====-->
+    <!--===== FOOTER =====-->
     <footer class="footer">
         <p class="footer__title">Keval</p>
         <div class="footer__social">
-            
-            <a href="https://www.instagram.com/_keval_patel85" class="footer__icon"><i class='bx bxl-instagram' ></i></a>
-            <a href="https://x.com/Keval8511" class="footer__icon"><i class='bx bxl-twitter' ></i></a>
+
+            <a href="https://www.instagram.com/_keval_patel85" class="footer__icon"><i class='bx bxl-instagram'></i></a>
+            <a href="https://x.com/Keval8511" class="footer__icon"><i class='bx bxl-twitter'></i></a>
             <a href="http://linkedin.com/in/keval-kapadiya85" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
         </div>
         <p class="footer__copy">&#169; 2025 KevalKapadiya</p>
@@ -327,8 +440,3 @@
 </body>
 
 </html>
-
-
-
-
-
