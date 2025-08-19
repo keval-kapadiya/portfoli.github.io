@@ -12,6 +12,45 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 
     <title>Portfolio website complete</title>
+
+    <style>
+        /* 🌙 Dark Mode Styles */
+        body.dark-mode {
+            background-color: #121212;
+            color: #f5f5f5;
+            transition: all 0.3s ease-in-out;
+        }
+
+        body.dark-mode .nav,
+        body.dark-mode .footer {
+            background: #1e1e1e;
+        }
+
+        body.dark-mode .button {
+            background: #bb86fc;
+            color: #fff;
+        }
+
+        body.dark-mode .section-title {
+            color: #bb86fc;
+        }
+
+        body.dark-mode .nav__link.active-link {
+            color: #bb86fc;
+        }
+
+        /* Theme Toggle Button */
+        #theme-toggle {
+            cursor: pointer;
+            font-size: 1.4rem;
+            margin-left: 15px;
+            color: #33050B;
+        }
+
+        body.dark-mode #theme-toggle {
+            color: #f5f5f5;
+        }
+    </style>
 </head>
 
 <body>
@@ -32,12 +71,16 @@
                     <li class="nav__item"><a href="#certificate" class="nav__link">Certificates</a></li>
                     <li class="nav__item"><a href="#resume" class="nav__link">Resume</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
-
                 </ul>
             </div>
 
             <div class="nav__toggle" id="nav-toggle">
                 <i class='bx bx-menu'></i>
+            </div>
+
+            <!-- 🌙 Dark/Light Mode Toggle -->
+            <div id="theme-toggle">
+                <i class="fa-solid fa-moon"></i>
             </div>
         </nav>
     </header>
@@ -181,7 +224,7 @@
 
                 <!-- 12th -->
                 <div class="education__item">
-                    <h3 class="education__degree">Higher Secondary (12th Standard - Science)</h3>
+                    <h3 class="education__degree">Higher Secondary (12th Standard)</h3>
                     <span class="education__institution">Gujarat Secondary & Higher Secondary Board</span>
                     <span class="education__year">2021 - 2022</span>
                     <p class="education__result">Result: 94.85%</p>
@@ -483,11 +526,9 @@
         });
     </script>
 
-    <!--===== FOOTER =====-->
     <footer class="footer">
         <p class="footer__title">Keval</p>
         <div class="footer__social">
-
             <a href="https://www.instagram.com/_keval_patel85" class="footer__icon"><i class='bx bxl-instagram'></i></a>
             <a href="https://x.com/Keval8511" class="footer__icon"><i class='bx bxl-twitter'></i></a>
             <a href="http://linkedin.com/in/keval-kapadiya85" class="footer__icon"><i class='bx bxl-linkedin'></i></a>
@@ -500,6 +541,30 @@
 
     <!--===== MAIN JS =====-->
     <script src="assets/js/main.js"></script>
+
+    <!-- 🌙 Dark Mode Script -->
+    <script>
+        const themeToggle = document.getElementById("theme-toggle");
+        const body = document.body;
+
+        // Load saved mode
+        if (localStorage.getItem("theme") === "dark") {
+            body.classList.add("dark-mode");
+            themeToggle.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+        }
+
+        themeToggle.addEventListener("click", () => {
+            body.classList.toggle("dark-mode");
+
+            if (body.classList.contains("dark-mode")) {
+                themeToggle.innerHTML = `<i class="fa-solid fa-sun"></i>`;
+                localStorage.setItem("theme", "dark");
+            } else {
+                themeToggle.innerHTML = `<i class="fa-solid fa-moon"></i>`;
+                localStorage.setItem("theme", "light");
+            }
+        });
+    </script>
 </body>
 
 </html>
