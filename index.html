@@ -13,44 +13,7 @@
 
     <title>Portfolio website complete</title>
 
-    <style>
-        /* 🌙 Dark Mode Styles */
-        body.dark-mode {
-            background-color: #121212;
-            color: #f5f5f5;
-            transition: all 0.3s ease-in-out;
-        }
 
-        body.dark-mode .nav,
-        body.dark-mode .footer {
-            background: #1e1e1e;
-        }
-
-        body.dark-mode .button {
-            background: #bb86fc;
-            color: #fff;
-        }
-
-        body.dark-mode .section-title {
-            color: #bb86fc;
-        }
-
-        body.dark-mode .nav__link.active-link {
-            color: #bb86fc;
-        }
-
-        /* Theme Toggle Button */
-        #theme-toggle {
-            cursor: pointer;
-            font-size: 1.4rem;
-            margin-left: 15px;
-            color: #33050B;
-        }
-
-        body.dark-mode #theme-toggle {
-            color: #f5f5f5;
-        }
-    </style>
 </head>
 
 <body>
@@ -69,7 +32,7 @@
                     <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li>
                     <li class="nav__item"><a href="#work" class="nav__link">Project</a></li>
                     <li class="nav__item"><a href="#certificate" class="nav__link">Certificates</a></li>
-                    <li class="nav__item"><a href="#resume" class="nav__link">Resume</a></li>
+                    <li class="nav__item"><a href="#experience" class="nav__link">Experience</a></li>
                     <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li>
                 </ul>
             </div>
@@ -94,12 +57,13 @@
                     I'am <span class="home__title-color">Keval</span><br>
                     <small><span id="role"></span><span class="cursor">|</span></small>
                 </h1>
-            </div>
 
-            <div class="home__social">
-                <a href="http://linkedin.com/in/keval-kapadiya85" class="home__social-icon"><i
-                        class='bx bxl-linkedin'></i></a>
-                <a href="https://github.com/KevalKapadiya" class="home__social-icon"><i class='bx bxl-github'></i></a>
+                <div class="home__social">
+                    <a href="http://linkedin.com/in/keval-kapadiya85" class="home__social-icon"><i
+                            class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/KevalKapadiya" class="home__social-icon"><i
+                            class='bx bxl-github'></i></a>
+                </div>
             </div>
 
             <div class="home__img">
@@ -109,7 +73,7 @@
 
         <!-- Typing Effect Script -->
         <script>
-            const roles = [ "Data Scientist","Full Stack Developer"];
+            const roles = ["Data Scientist", "Full Stack Developer"];
             let index = 0;
             let charIndex = 0;
             let isDeleting = false;
@@ -139,32 +103,7 @@
             typeEffect();
         </script>
 
-        <!-- Cursor Styling -->
-        <style>
-            small {
-                font-size: 50px;
-                color: #33050B;
-            }
 
-            .cursor {
-                display: inline-block;
-                margin-left: 2px;
-                animation: blink 0.7s infinite;
-            }
-
-            @keyframes blink {
-
-                0%,
-                50% {
-                    opacity: 1;
-                }
-
-                51%,
-                100% {
-                    opacity: 0;
-                }
-            }
-        </style>
 
 
         <!--===== ABOUT =====-->
@@ -173,7 +112,7 @@
 
             <div class="about__container bd-grid">
                 <div class="about__img">
-                    <img src="assets/img/WhatsApp Image 2025-03-31 at 6.21.37 PM.jpeg" alt="">
+                    <img src="assets/img/keval1.jpg" alt="">
                 </div>
 
                 <div>
@@ -185,7 +124,7 @@
                             <li><b>Skills:</b> Predictive modeling, Deep learning, NLP, Data Analytics</li>
                             <li><b>Tools:</b> Python, TensorFlow, Scikit-learn, Pandas, NumPy</li>
                         </ul>
-                        
+
                         <h3>👨‍💻 Frontend Development</h3>
                         <ul>
                             <li><b>Languages & Tools:</b> HTML, CSS, JavaScript</li>
@@ -243,147 +182,213 @@
             </div>
 
 
-        <!-- Styling -->
-        <style>
-            .education__download {
-                text-align: center;
-                /* centers the button */
-                margin-top: 20px;
-            }
 
 
 
-            .button {
-                display: inline-block;
-                padding: 10px 18px;
-                background: #F74363;
-                color: #fff;
-                border-radius: 6px;
-                text-decoration: none;
-                font-weight: bold;
-                transition: 0.3s;
-            }
-        </style>
 
+            <!--===== SKILLS =====-->
+            <section class="skills section" id="skills">
+                <h2 class="section-title">Skills</h2>
 
+                <div class="skills__container bd-grid">
+                    <div>
+                        <h2 class="skills__subtitle">Professional Skills</h2>
+                        <p class="skills__text">
+                            I have expertise in full-stack development, backend frameworks, and data-driven
+                            technologies.
+                            Below are my core skills:
+                        </p>
+                        <div class="skills__list">
+                            <!-- Data Science & AI/ML -->
+                            <div class="skills__data">
+                                <i class="fa-solid fa-brain skills__icon"></i>
+                                <span class="skills__name">Data Science &amp; AI/ML</span>
+                            </div>
 
-        <!--===== SKILLS =====-->
-        <section class="skills section" id="skills">
-            <h2 class="section-title">Skills</h2>
+                            <!-- HTML5 -->
+                            <div class="skills__data">
+                                <i class='bx bxl-html5 skills__icon'></i>
+                                <span class="skills__name">HTML5</span>
+                            </div>
 
-            <div class="skills__container bd-grid">
-                <div>
-                    <h2 class="skills__subtitle">Professional Skills</h2>
-                    <p class="skills__text">
-                        I have expertise in full-stack development, backend frameworks, and data-driven technologies.
-                        Below are my core skills:
-                    </p>
+                            <!-- CSS3 -->
+                            <div class="skills__data">
+                                <i class='bx bxl-css3 skills__icon'></i>
+                                <span class="skills__name">CSS3</span>
+                            </div>
 
-                    <!-- Data Science & AI/ML -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="fa-solid fa-brain skills__icon"></i>
-                            <span class="skills__name">Data Science & AI/ML</span>
-                        </div>
-                    </div>
-            
+                            <!-- JavaScript -->
+                            <div class="skills__data">
+                                <i class='bx bxl-javascript skills__icon'></i>
+                                <span class="skills__name">JavaScript</span>
+                            </div>
 
-                    <!-- HTML5 -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-html5 skills__icon'></i>
-                            <span class="skills__name">HTML5</span>
-                        </div>
-                    </div>
+                            <!-- PHP -->
+                            <div class="skills__data">
+                                <i class="fa-brands fa-php skills__icon"></i>
+                                <span class="skills__name">PHP</span>
+                            </div>
 
-                    <!-- CSS3 -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-css3 skills__icon'></i>
-                            <span class="skills__name">CSS3</span>
-                        </div>
-                    </div>
+                            <!-- ASP.NET -->
+                            <div class="skills__data">
+                                <i class='bx bxl-microsoft skills__icon'></i>
+                                <span class="skills__name">ASP.NET</span>
+                            </div>
 
-                    <!-- JavaScript -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-javascript skills__icon'></i>
-                            <span class="skills__name">JavaScript</span>
-                        </div>
-                    </div>
+                            <!-- MySQL -->
+                            <div class="skills__data">
+                                <i class="fa-solid fa-database skills__icon"></i>
+                                <span class="skills__name">MySQL</span>
+                            </div>
 
-                    <!-- PHP -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="fa-brands fa-php skills__icon"></i>
-                            <span class="skills__name">PHP</span>
+                            <!-- Python -->
+                            <div class="skills__data">
+                                <i class="fa-brands fa-python skills__icon"></i>
+                                <span class="skills__name">Python</span>
+                            </div>
+
+                            <!-- Django -->
+                            <div class="skills__data">
+                                <i class="fa-solid fa-leaf skills__icon"></i>
+                                <span class="skills__name">Django</span>
+                            </div>
                         </div>
                     </div>
 
-                    <!-- ASP.NET -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class='bx bxl-microsoft skills__icon'></i>
-                            <span class="skills__name">ASP.NET</span>
-                        </div>
+                    <!-- Optional image -->
+                    <div>
+                        <img src="assets/img/4.png" alt="Skills Illustration" class="skills__img">
                     </div>
-
-                    <!-- MySQL -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="fa-solid fa-database skills__icon"></i>
-                            <span class="skills__name">MySQL</span>
-                        </div>
-                    </div>
-
-                    <!-- Python -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="fa-brands fa-python skills__icon"></i>
-                            <span class="skills__name">Python</span>
-                        </div>
-                    </div>
-
-                    <!-- Django -->
-                    <div class="skills__data">
-                        <div class="skills__names">
-                            <i class="fa-solid fa-leaf skills__icon"></i>
-                            <span class="skills__name">Django</span>
-                        </div>
-                    </div>
-                        </div>
-
-                <!-- Optional image -->
-                <div>
-                    <img src="assets/img/4.png" alt="Skills Illustration" class="skills__img">
                 </div>
-            </div>
-        </section>
+            </section>
+            <!--===== WORK =====-->
+            <section class="work section" id="work">
+                <h2 class="section-title">Projects</h2>
+
+                <div class="work__container bd-grid">
+                    <!-- Project 1: Automated Data Visualization -->
+                    <div class="work__card work__img">
+                        <div class="work__img-container">
+                            <img src="assets/img/data_viz_preview.svg" alt="Automated Data Visualization Demo">
+                        </div>
+                        <div class="work__content">
+                            <h3 class="work__title">Automated Data Visualization</h3>
+                            <p class="work__tech">Pandas | NumPy | Seaborn | Streamlit</p>
+                            <p class="work__description">Interactive web dashboard for quick, zero-coding dataset
+                                analysis. Supports automated clearing of missing values, statistical runs, regression
+                                plots, and ML model scoring.</p>
+                            <div class="work__links">
+                                <a href="https://www.linkedin.com/posts/kishor-goraniya29_datascience-machinelearning-python-ugcPost-7364724841008058368-U2ih?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEZa5tUB2Lb7Kayzq96xSW_slzviO2jJXVY"
+                                    target="_blank" class="button button--small button--secondary">
+                                    <i class="fa-brands fa-linkedin"></i> Project Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 2: Breed Analyzer -->
+                    <div class="work__card work__img">
+                        <div class="work__img-container">
+                            <img src="assets/img/breed.png" alt="Breed Analyzer Demo">
+                        </div>
+                        <div class="work__content">
+                            <h3 class="work__title">Breed Analyzer</h3>
+                            <p class="work__tech">TensorFlow | PyTorch | Django</p>
+                            <p class="work__description">Deep learning CNN model pipeline trained to recognize cows,
+                                buffaloes, dogs, and cats. Delivers fast predictions (confidence &amp; latency stats)
+                                through a clean Django UI.</p>
+                            <div class="work__links">
+                                <a href="https://www.linkedin.com/posts/kishor-goraniya29_machinelearning-deeplearning-tensorflow-ugcPost-7391901586484092929-y6Su?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEZa5tUB2Lb7Kayzq96xSW_slzviO2jJXVY"
+                                    target="_blank" class="button button--small button--secondary">
+                                    <i class="fa-brands fa-linkedin"></i> Project Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Project 3: DSA Visualizer -->
+                    <div class="work__card work__img">
+                        <div class="work__img-container">
+                            <img src="assets/img/dsa.png" alt="DSA Visualizer Demo">
+                        </div>
+                        <div class="work__content">
+                            <h3 class="work__title">DSA Visualizer &amp; AI Tutor</h3>
+                            <p class="work__tech">Python | NumPy | Streamlit</p>
+                            <p class="work__description">Interactive visualizer for search &amp; sort algorithms (Quick,
+                                Merge, Bubble, Selection, etc.) with custom sizes, speeds, pause/resume, and instant AI
+                                tutor walk-throughs.</p>
+                            <div class="work__links">
+                                <a href="https://www.linkedin.com/posts/keval-kapadiya85_datascience-python-streamlit-activity-7365816388453593089-vGi9?utm_source=social_share_send&utm_medium=member_desktop_web&rcm=ACoAAEZa5tUB2Lb7Kayzq96xSW_slzviO2jJXVY"
+                                    target="_blank" class="button button--small button--secondary">
+                                    <i class="fa-brands fa-linkedin"></i> Project Demo
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
 
 
+                    <!-- Project 4: EduGaidHub -->
+                    <div class="work__card work__img">
+                        <div class="work__img-container">
+                            <img src="assets/img/2.png" alt="EduGaidHub Dashboard">
+                        </div>
+                        <div class="work__content">
+                            <h3 class="work__title">EduGaidHub</h3>
+                            <p class="work__tech">ASP.NET MVC | SQL Server | C#</p>
+                            <p class="work__description">A comprehensive student-centric guidance and resource hub
+                                offering detailed course directories, counseling assets, reviews, and a user community.
+                            </p>
+                            <div class="work__links">
+                                <a href="https://github.com/KevalKapadiya/EduGaidHub" target="_blank"
+                                    class="button button--small">
+                                    <i class="fa-brands fa-github"></i> GitHub Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
 
 
-
-
-        <!--===== WORK =====-->
-        <section class="work section" id="work">
-            <h2 class="section-title">Project</h2>
-
-            <div class="work__container bd-grid">
-                <a href="https://github.com/KevalKapadiya/EduGaidHub" target="_blank" class="work__img">
-                    <img src="assets/img/2.png" alt="Project 1">
-                </a>
-                <a href="https://github.com/KevalKapadiya/Blogger" target="_blank" class="work__img">
-                    <img src="assets/img/Screenshot 2025-04-05 122432.png" alt="Project 2">
-                </a>
-                <a href="https://github.com/KevalKapadiya/Hackout2024-Hari" target="_blank" class="work__img">
-                    <img src="assets/img/Screenshot 2025-04-10 164737.png" alt="Project 2">
-                </a>
-
-
-            </div>
-        </section>
+                    <!-- Project 5: Blogger -->
+                    <div class="work__card work__img">
+                        <div class="work__img-container">
+                            <img src="assets/img/Screenshot 2025-04-05 122432.png" alt="Blogger Portal">
+                        </div>
+                        <div class="work__content">
+                            <h3 class="work__title">Blogger Web App</h3>
+                            <p class="work__tech">Django | Python | SQLite</p>
+                            <p class="work__description">A robust blogging application featuring clean article curation,
+                                categories, user profiles, rich text editing, secure authentication, and active comment
+                                boards.</p>
+                            <div class="work__links">
+                                <a href="https://github.com/KevalKapadiya/Blogger" target="_blank"
+                                    class="button button--small">
+                                    <i class="fa-brands fa-github"></i> GitHub Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Project 6: Hackout2024-Hari -->
+                    <div class="work__card work__img">
+                        <div class="work__img-container">
+                            <img src="assets/img/Screenshot 2025-04-10 164737.png" alt="Hari Crop yield model">
+                        </div>
+                        <div class="work__content">
+                            <h3 class="work__title">Hari: Crop &amp; Yield Predictor</h3>
+                            <p class="work__tech">Python | Django | SQLite</p>
+                            <p class="work__description">Built during HackOut 2024. A data-driven system evaluating soil
+                                properties and regional weather to forecast optimal crops, sowing times, and yield
+                                statistics.</p>
+                            <div class="work__links">
+                                <a href="https://github.com/KevalKapadiya/Hackout2024-Hari" target="_blank"
+                                    class="button button--small">
+                                    <i class="fa-brands fa-github"></i> GitHub Code
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
 
 
     </main>
@@ -397,8 +402,6 @@
             <div class="certificate__item">
                 <img src="assets/img/11.png" alt="Certificate 1" class="certificate__img">
                 <h3 class="certificate__title">GenAI Study Jam</h3>
-
-                </h3>
                 <p class="certificate__description">Completed all 15 GenAI Study Jam courses, demonstrating skills and
                     dedication in Generative AI learning.</p>
                 <a href="assets/img/11.png" class="button" target="_blank">View</a>
@@ -457,18 +460,51 @@
     </section>
 
 
-    <!--===== RESUME =====-->
-    <section class="resume section" id="resume">
-        <h2 class="section-title">Resume</h2>
+    <!--===== EXPERIENCE =====-->
+    <section class="experience section" id="experience">
+        <h2 class="section-title">Experience</h2>
 
-        <div class="resume__container bd-grid">
-            <p class="resume__text">You can download or view my resume by clicking the button below:</p>
-            <a href="assets/img/Keval Resume.pdf" class="button" download target="_blank">
-                <i class="fa-solid fa-file-arrow-down"></i> Download Resume
-            </a>
-            <a href="assets/img/Keval Resume.pdf" class="button" target="_blank" style="margin-top: 10px;">
-                <i class="fa-solid fa-eye"></i> View Resume
-            </a>
+        <div class="experience__container bd-grid">
+
+
+            <!-- Experience 1 -->
+            <div class="experience__item">
+                <div class="experience__header">
+                    <img src="assets/img/bloomfield.jpg" alt="BloomField Innovation" class="experience__logo">
+                    <div>
+                        <h3 class="experience__title">Data Science Intern</h3>
+                        <span class="experience__company">BloomField Innovation | UniRP</span>
+                        <span class="experience__badge">Full-time</span>
+                    </div>
+                </div>
+                <div class="experience__details">
+                    <span><i class="fa-regular fa-calendar"></i> March 2026 - Present</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Rajkot, Gujarat, India (Onsite)</span>
+                </div>
+            </div>
+
+            <!-- Experience 2 -->
+            <div class="experience__item">
+                <div class="experience__header">
+                    <img src="assets/img/hepro.jpg" alt="HEProAI" class="experience__logo">
+                    <div>
+                        <h3 class="experience__title">AI/ML Intern</h3>
+                        <span class="experience__company">HEProAI</span>
+                        <span class="experience__badge">Internship</span>
+                    </div>
+                </div>
+                <div class="experience__details">
+                    <span><i class="fa-regular fa-calendar"></i> January 2026 - March 2026</span>
+                    <span><i class="fa-solid fa-location-dot"></i> Remote</span>
+                </div>
+                <div class="experience__actions">
+                    <a href="assets/img/KEVAL KAPADIYA,.pdf" class="button" target="_blank">
+                        <i class="fa-solid fa-file-pdf"></i> Show Completion Letter
+                    </a>
+                </div>
+            </div>
+
+
         </div>
     </section>
 
