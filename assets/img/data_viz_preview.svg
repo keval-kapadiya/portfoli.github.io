@@ -1,0 +1,177 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <!-- Gradients -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#1e293b" />
+    </linearGradient>
+    <linearGradient id="chartGradBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#0284c7" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="chartGradPink" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.8" />
+      <stop offset="100%" stop-color="#be185d" stop-opacity="0.1" />
+    </linearGradient>
+    <linearGradient id="accentGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6" />
+      <stop offset="100%" stop-color="#ec4899" />
+    </linearGradient>
+    <linearGradient id="lineGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#06b6d4" />
+      <stop offset="50%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#8b5cf6" />
+    </linearGradient>
+    <filter id="dropShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="8" stdDeviation="6" flood-color="#000000" flood-opacity="0.4" />
+    </filter>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="4" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="800" height="500" rx="12" fill="url(#bgGrad)" />
+
+  <!-- Sidebar -->
+  <rect x="0" y="0" width="200" height="500" rx="12" fill="#0b0f19" opacity="0.6" />
+  
+  <!-- Logo/Title -->
+  <text x="25" y="45" font-family="'Poppins', sans-serif" font-size="16" font-weight="700" fill="#f8fafc">AutoViz Engine</text>
+  <circle cx="170" cy="40" r="6" fill="#10b981" />
+  
+  <!-- Sidebar Menu Items -->
+  <g transform="translate(20, 80)">
+    <!-- Active Item -->
+    <rect x="0" y="0" width="160" height="36" rx="8" fill="#1e293b" />
+    <rect x="0" y="8" width="4" height="20" rx="2" fill="#8b5cf6" />
+    <text x="35" y="23" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Dashboard</text>
+    <rect x="15" y="12" width="12" height="12" rx="2" fill="none" stroke="#8b5cf6" stroke-width="2" />
+    
+    <!-- Item 2 -->
+    <g transform="translate(0, 48)">
+      <text x="35" y="23" font-family="'Poppins', sans-serif" font-size="12" fill="#94a3b8">Data Cleaner</text>
+      <path d="M15,12 L27,12 L21,24 Z" fill="none" stroke="#94a3b8" stroke-width="2" stroke-linejoin="round" />
+    </g>
+    
+    <!-- Item 3 -->
+    <g transform="translate(0, 96)">
+      <text x="35" y="23" font-family="'Poppins', sans-serif" font-size="12" fill="#94a3b8">ML Models</text>
+      <circle cx="21" cy="18" r="6" fill="none" stroke="#94a3b8" stroke-width="2" />
+    </g>
+    
+    <!-- Item 4 -->
+    <g transform="translate(0, 144)">
+      <text x="35" y="23" font-family="'Poppins', sans-serif" font-size="12" fill="#94a3b8">Settings</text>
+      <rect x="15" y="12" width="12" height="12" rx="6" fill="none" stroke="#94a3b8" stroke-width="2" />
+    </g>
+  </g>
+
+  <!-- Upload Area at Bottom Sidebar -->
+  <g transform="translate(20, 360)">
+    <rect x="0" y="0" width="160" height="110" rx="10" fill="#111827" stroke="#374151" stroke-dasharray="4" />
+    <path d="M80,30 L80,60 M65,45 L80,30 L95,45" fill="none" stroke="#8b5cf6" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+    <text x="80" y="80" font-family="'Poppins', sans-serif" font-size="10" fill="#94a3b8" text-anchor="middle">Upload CSV/XLSX</text>
+  </g>
+
+  <!-- Main Content Area -->
+  <!-- Top Stats Row -->
+  <g transform="translate(220, 25)">
+    <!-- Stat Card 1 -->
+    <g filter="url(#dropShadow)">
+      <rect x="0" y="0" width="170" height="80" rx="12" fill="#1e293b" />
+      <text x="15" y="30" font-family="'Poppins', sans-serif" font-size="11" fill="#94a3b8">Rows Processed</text>
+      <text x="15" y="60" font-family="'Poppins', sans-serif" font-size="22" font-weight="700" fill="#f8fafc">14,285</text>
+      <path d="M120,40 L135,25 L150,40" fill="none" stroke="#10b981" stroke-width="2" stroke-linecap="round" />
+      <text x="135" y="55" font-family="'Poppins', sans-serif" font-size="9" font-weight="600" fill="#10b981" text-anchor="middle">+12.5%</text>
+    </g>
+    
+    <!-- Stat Card 2 -->
+    <g transform="translate(190, 0)" filter="url(#dropShadow)">
+      <rect x="0" y="0" width="170" height="80" rx="12" fill="#1e293b" />
+      <text x="15" y="30" font-family="'Poppins', sans-serif" font-size="11" fill="#94a3b8">Model Accuracy</text>
+      <text x="15" y="60" font-family="'Poppins', sans-serif" font-size="22" font-weight="700" fill="#a78bfa">94.82%</text>
+      <circle cx="135" cy="40" r="15" fill="none" stroke="#374151" stroke-width="3" />
+      <circle cx="135" cy="40" r="15" fill="none" stroke="#8b5cf6" stroke-width="3" stroke-dasharray="70 30" />
+    </g>
+
+    <!-- Stat Card 3 -->
+    <g transform="translate(380, 0)" filter="url(#dropShadow)">
+      <rect x="0" y="0" width="170" height="80" rx="12" fill="#1e293b" />
+      <text x="15" y="30" font-family="'Poppins', sans-serif" font-size="11" fill="#94a3b8">Visualizations</text>
+      <text x="15" y="60" font-family="'Poppins', sans-serif" font-size="22" font-weight="700" fill="#38bdf8">18 Active</text>
+      <path d="M125,50 L132,35 L140,43 L148,30" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" />
+    </g>
+  </g>
+
+  <!-- Charts Layout -->
+  <g transform="translate(220, 130)">
+    <!-- Large Chart Card -->
+    <g filter="url(#dropShadow)">
+      <rect x="0" y="0" width="550" height="210" rx="12" fill="#111827" stroke="#1f2937" stroke-width="1" />
+      
+      <!-- Chart Header -->
+      <text x="20" y="30" font-family="'Poppins', sans-serif" font-size="13" font-weight="600" fill="#f8fafc">Regression Trend Analysis</text>
+      <text x="530" y="30" font-family="'Poppins', sans-serif" font-size="10" fill="#6b7280" text-anchor="end">Live Streamlit Preview</text>
+      
+      <!-- Grid Lines -->
+      <line x1="50" y1="60" x2="520" y2="60" stroke="#1f2937" stroke-width="1" />
+      <line x1="50" y1="100" x2="520" y2="100" stroke="#1f2937" stroke-width="1" />
+      <line x1="50" y1="140" x2="520" y2="140" stroke="#1f2937" stroke-width="1" />
+      <line x1="50" y1="180" x2="520" y2="180" stroke="#374151" stroke-width="1.5" />
+      
+      <!-- Area chart 1 -->
+      <path d="M50,180 L100,140 L160,150 L220,110 L280,120 L340,75 L400,90 L460,65 L520,55 L520,180 Z" fill="url(#chartGradBlue)" />
+      
+      <!-- Line Chart 2 -->
+      <path d="M50,160 L100,120 L160,135 L220,95 L280,105 L340,60 L400,75 L460,50 L520,40" fill="none" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" filter="url(#glow)" />
+      
+      <!-- Interactive Points -->
+      <circle cx="340" cy="60" r="5" fill="#f8fafc" stroke="#8b5cf6" stroke-width="2.5" />
+      <circle cx="520" cy="40" r="5" fill="#f8fafc" stroke="#ec4899" stroke-width="2.5" />
+      
+      <!-- Tooltip -->
+      <rect x="300" y="10" width="80" height="35" rx="6" fill="#1e293b" opacity="0.9" />
+      <text x="340" y="24" font-family="'Poppins', sans-serif" font-size="9" font-weight="600" fill="#f8fafc" text-anchor="middle">y = 12.4x + 5.2</text>
+      <text x="340" y="38" font-family="'Poppins', sans-serif" font-size="8" fill="#10b981" text-anchor="middle">R² = 0.982</text>
+    </g>
+  </g>
+
+  <g transform="translate(220, 360)">
+    <!-- Bottom Left Card (Classification Performance) -->
+    <g filter="url(#dropShadow)">
+      <rect x="0" y="0" width="265" height="115" rx="12" fill="#1e293b" />
+      <text x="15" y="25" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Feature Importance</text>
+      
+      <!-- Bars -->
+      <g transform="translate(15, 40)">
+        <text x="0" y="10" font-family="'Poppins', sans-serif" font-size="9" fill="#94a3b8">Age</text>
+        <rect x="40" y="2" width="180" height="8" rx="4" fill="#374151" />
+        <rect x="40" y="2" width="160" height="8" rx="4" fill="url(#accentGrad)" />
+        
+        <text x="0" y="26" font-family="'Poppins', sans-serif" font-size="9" fill="#94a3b8">Income</text>
+        <rect x="40" y="18" width="180" height="8" rx="4" fill="#374151" />
+        <rect x="40" y="18" width="120" height="8" rx="4" fill="url(#accentGrad)" />
+        
+        <text x="0" y="42" font-family="'Poppins', sans-serif" font-size="9" fill="#94a3b8">Score</text>
+        <rect x="40" y="34" width="180" height="8" rx="4" fill="#374151" />
+        <rect x="40" y="34" width="80" height="8" rx="4" fill="url(#accentGrad)" />
+      </g>
+    </g>
+
+    <!-- Bottom Right Card (Distribution) -->
+    <g transform="translate(285, 0)" filter="url(#dropShadow)">
+      <rect x="0" y="0" width="265" height="115" rx="12" fill="#1e293b" />
+      <text x="15" y="25" font-family="'Poppins', sans-serif" font-size="12" font-weight="600" fill="#f8fafc">Null Value Distribution</text>
+      
+      <!-- Side Bars -->
+      <rect x="25" y="45" width="24" height="50" rx="4" fill="#ef4444" opacity="0.8" />
+      <rect x="65" y="60" width="24" height="35" rx="4" fill="#f59e0b" opacity="0.8" />
+      <rect x="105" y="35" width="24" height="60" rx="4" fill="#10b981" opacity="0.8" />
+      <rect x="145" y="50" width="24" height="45" rx="4" fill="#3b82f6" opacity="0.8" />
+      <rect x="185" y="70" width="24" height="25" rx="4" fill="#8b5cf6" opacity="0.8" />
+      <rect x="225" y="40" width="24" height="55" rx="4" fill="#ec4899" opacity="0.8" />
+    </g>
+  </g>
+</svg>
